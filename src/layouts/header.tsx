@@ -4,6 +4,7 @@ import { SearchCommand } from "@/layouts/search-command";
 import { ModeSwitcher } from "@/layouts/mode-switcher";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const Header = () => {
   return (
@@ -14,7 +15,9 @@ export const Header = () => {
           <MobileNav />
           <div className="flex items-center gap-0.5">
             <SearchCommand />
-            <Button variant="outline">Iniciar sesión</Button>
+            <Button variant="outline">
+              <Link href="/sign-in">Iniciar sesión</Link>
+            </Button>
             <ModeSwitcher />
           </div>
         </div>
