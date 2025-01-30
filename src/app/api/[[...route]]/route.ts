@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
 
-import { browse } from "@/modules/home/server/route";
+import { browse } from "@/modules/browse/server/route";
 
 // export const runtime = "edge";
 

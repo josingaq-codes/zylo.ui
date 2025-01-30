@@ -36,4 +36,32 @@ export const browse = new Hono()
     const shows: Show[] = data.results;
 
     return c.json({ shows });
+  })
+  .get("/now/movies", async (c) => {
+    const url = `${TMDB_API_URL}/3/movie/now_playing?language=en-US`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: headers,
+    });
+
+    const data = await response.json();
+
+    const movies: Movie[] = data.results;
+
+    return c.json({ movies });
+  })
+  .get("/now/shows", async (c) => {
+    const url = `${TMDB_API_URL}/3/tv/airing_today?language=en-US`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: headers,
+    });
+
+    const data = await response.json();
+
+    const shows: Show[] = data.results;
+
+    return c.json({ shows });
   });

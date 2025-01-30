@@ -58,7 +58,7 @@ export const SearchCommand = () => {
         <CommandInput placeholder="Busca una película o serie..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Quick start">
+          <CommandGroup heading="Películas">
             <CommandItem>
               <FolderPlus
                 size={16}
@@ -91,7 +91,7 @@ export const SearchCommand = () => {
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
-          <CommandGroup heading="Navigation">
+          <CommandGroup heading="Series">
             <CommandItem>
               <ArrowUpRight
                 size={16}

@@ -1,4 +1,4 @@
-import { SkeletonCard } from "@/modules/home/components/skeleton-card";
+import { SkeletonCard } from "@/modules/browse/components/skeleton-card";
 
 interface ListSkeletonCardProps {
   quantity: number;
