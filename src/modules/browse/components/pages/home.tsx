@@ -25,7 +25,8 @@ export const Home = () => {
             name={movie.title}
             type={movie.media_type}
             date={new Date(movie.release_date).getFullYear().toString()}
-            img={movie.poster_path}
+            backdrop={movie.backdrop_path}
+            poster={movie.poster_path}
           />
         ))}
 
@@ -37,7 +38,8 @@ export const Home = () => {
             name={show.name}
             type={show.media_type}
             date={new Date(show.first_air_date).getFullYear().toString()}
-            img={show.poster_path}
+            backdrop={show.backdrop_path}
+            poster={show.poster_path}
           />
         ))}
       </div>

@@ -19,7 +19,8 @@ export const Movies = () => {
             name={movie.title}
             type="movie"
             date={new Date(movie.release_date).getFullYear().toString()}
-            img={movie.poster_path}
+            backdrop={movie.backdrop_path}
+            poster={movie.poster_path}
           />
         ))}
       </div>

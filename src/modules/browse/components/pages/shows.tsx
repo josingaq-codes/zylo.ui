@@ -19,7 +19,8 @@ export const Shows = () => {
             name={show.name}
             type="tv"
             date={new Date(show.first_air_date).getFullYear().toString()}
-            img={show.poster_path}
+            backdrop={show.backdrop_path}
+            poster={show.poster_path}
           />
         ))}
       </div>
