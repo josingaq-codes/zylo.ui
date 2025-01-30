@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
-import { Shows } from "@/modules/browse/components/shows";
+import { Shows } from "@/modules/browse/components/pages/shows";
 
 export const metadata: Metadata = {
-  title: "Películas",
+  title: "Series",
 };
 
 export default function ShowsPage() {

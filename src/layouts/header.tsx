@@ -1,8 +1,7 @@
 import { DesktopNav } from "@/layouts/desktop-nav";
 import { MobileNav } from "@/layouts/mobile-nav";
+import { SearchCommand } from "@/layouts/search-command";
 import { ModeSwitcher } from "@/layouts/mode-switcher";
-
-import { SearchCommand } from "@/components/search-command";
 
 import { Button } from "@/components/ui/button";
 

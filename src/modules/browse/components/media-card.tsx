@@ -33,7 +33,7 @@ export const MediaCard = ({ className, name, type, date, img }: CardProps) => {
           {type} - {date}
         </CardDescription>
       </CardHeader>
-      <CardContent className="relative flex items-center justify-center cursor-pointer group px-2 py-2 sm:min-h-[350px]">
+      <CardContent className="relative flex items-center justify-center cursor-pointer group px-2 py-2 md:min-h-[350px]">
         <img
           src={`${NEXT_PUBLIC_TMDB_IMG_URL}/t/p/original${img}`}
           alt={name}

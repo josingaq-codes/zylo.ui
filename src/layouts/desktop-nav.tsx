@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 
-import { Logo } from "@/components/logo";
+import { Logo } from "@/layouts/logo";
 
 export const DesktopNav = () => {
   const pathname = usePathname();
