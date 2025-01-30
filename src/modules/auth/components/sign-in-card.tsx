@@ -1,3 +1,13 @@
+"use client";
+
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import { toast } from "sonner";
+
+import { signInSchema } from "@/modules/auth/auth-schema";
+
 import Link from "next/link";
 
 import {
@@ -7,8 +17,14 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
-
-import { Label } from "@/components/ui/label";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
@@ -18,6 +34,19 @@ import { Logo } from "@/layouts/logo";
 import { RiGoogleFill, RiGithubFill } from "@remixicon/react";
 
 export const SignInCard = () => {
+  const form = useForm<z.infer<typeof signInSchema>>({
+    resolver: zodResolver(signInSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+      rememberMe: false,
+    },
+  });
+
+  const onSubmit = (values: z.infer<typeof signInSchema>) => {
+    console.log(values);
+  };
+
   return (
     <Card>
       <CardHeader className="flex flex-col items-center gap-2">
@@ -30,59 +59,92 @@ export const SignInCard = () => {
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
-        <form className="space-y-5">
-          <div className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="email">Correo electrónico</Label>
-              <Input
-                id="email"
-                placeholder="Ingresa tu correo electrónico"
-                type="email"
-                required
+        <Form {...form}>
+          <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel htmlFor="email">Correo electrónico</FormLabel>
+                  <FormControl>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="Ingresa tu correo electrónico"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel htmlFor="password">Contraseña</FormLabel>
+                  <FormControl>
+                    <Input
+                      id="password"
+                      type="password"
+                      placeholder="Ingresa tu contraseña"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <div className="flex justify-between items-center gap-2">
+              <FormField
+                control={form.control}
+                name="rememberMe"
+                render={({ field }) => (
+                  <FormItem className="flex items-center gap-2">
+                    <FormControl>
+                      <Checkbox
+                        id="rememberMe"
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                    </FormControl>
+                    <FormLabel
+                      htmlFor="rememberMe"
+                      className="font-normal text-muted-foreground !mt-0.5"
+                    >
+                      Recuérdame
+                    </FormLabel>
+                  </FormItem>
+                )}
               />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="password">Contraseña</Label>
-              <Input
-                id="password"
-                placeholder="Ingresa tu contraseña"
-                type="password"
-                required
-              />
-            </div>
-          </div>
-          <div className="flex justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <Checkbox id="remember" />
-              <Label
-                htmlFor="remember"
-                className="font-normal text-muted-foreground"
+              <Link
+                className="text-sm underline hover:no-underline"
+                href="/recover-password"
               >
-                Recuérdame
-              </Label>
+                ¿Olvidaste la contraseña?
+              </Link>
             </div>
-            <Link
-              className="text-sm underline hover:no-underline"
-              href="/recover-password"
-            >
-              ¿Olvidaste la contraseña?
-            </Link>
-          </div>
-          <Button type="button" className="w-full">
-            Iniciar sesión
-          </Button>
-        </form>
+
+            <Button type="submit" className="w-full">
+              Iniciar sesión
+            </Button>
+          </form>
+        </Form>
 
         <div className="flex items-center gap-3 before:h-px before:flex-1 before:bg-border after:h-px after:flex-1 after:bg-border">
           <span className="text-xs text-muted-foreground">O</span>
         </div>
 
-        <Button variant="outline">
+        <Button variant="outline" onClick={() => toast.info("Próximamente")}>
           <RiGoogleFill className="me-3" size={16} />
           Iniciar sesión con Google
         </Button>
 
-        <Button variant="outline">
+        <Button variant="outline" onClick={() => toast.info("Próximamente")}>
           <RiGithubFill className="me-3" size={16} />
           Iniciar sesión con GitHub
         </Button>

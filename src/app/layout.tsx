@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import { Providers } from "@/providers";
 
+import { Toaster } from "@/components/ui/sonner";
+
 import "@/styles/globals.css";
 
 import "@fontsource-variable/onest";
@@ -30,6 +32,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
               {children}
             </div>
           </div>
+          <Toaster richColors closeButton />
         </Providers>
       </body>
     </html>
