@@ -7,7 +7,7 @@ interface ListSkeletonCardProps {
 export const ListSkeletonCard = ({ quantity }: ListSkeletonCardProps) => {
   return (
     <>
-      {[...Array(quantity)].map((_, index) => (
+      {Array.from({ length: quantity }).map((_, index) => (
         <SkeletonCard key={index} />
       ))}
     </>

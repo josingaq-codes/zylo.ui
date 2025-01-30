@@ -21,6 +21,8 @@
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "cmdk": "1.0.4",
+    "embla-carousel-autoplay": "^8.5.2",
+    "embla-carousel-react": "^8.5.2",
     "hono": "4.6.19",
     "lucide-react": "0.474.0",
     "next": "15.1.6",

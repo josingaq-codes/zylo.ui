@@ -3,6 +3,7 @@
 import { useTrendingMovies } from "@/modules/browse/api/use-trending-movies";
 import { useTrendingShows } from "@/modules/browse/api/use-trending-shows";
 
+import { MediaCarousel } from "@/modules/browse/components/media-carousel";
 import { MediaCard } from "@/modules/browse/components/media-card";
 import { ListSkeletonCard } from "@/modules/browse/components/list-skeleton-card";
 
@@ -11,7 +12,10 @@ export const Home = () => {
   const { data: shows, isLoading: loadingShows } = useTrendingShows();
 
   return (
-    <section className="max-w-screen-xl mx-auto px-4 sm:px-6 py-4">
+    <section className="max-w-screen-xl mx-auto px-4 sm:px-6 py-4 space-y-4">
+      <div className="flex justify-center">
+        <MediaCarousel />
+      </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {loadingMovies && <ListSkeletonCard quantity={20} />}
 
