@@ -20,16 +20,18 @@ export const Header = async () => {
         <div className="flex h-14 justify-between items-center">
           <DesktopNav />
           <MobileNav />
-          <div className="flex justify-between items-center gap-0.5">
+          <div className="flex items-center gap-1">
             <SearchCommand />
-            {session ? (
-              <UserAvatar user={session.user} />
-            ) : (
-              <Button variant="outline">
-                <Link href="/sign-in">Iniciar sesión</Link>
-              </Button>
-            )}
-            <ModeSwitcher />
+            <div className="flex items-center gap-3">
+              <ModeSwitcher />
+              {session ? (
+                <UserAvatar user={session.user} />
+              ) : (
+                <Button variant="outline" className="text-muted-foreground/80">
+                  <Link href="/sign-in">Iniciar sesión</Link>
+                </Button>
+              )}
+            </div>
           </div>
         </div>
       </div>

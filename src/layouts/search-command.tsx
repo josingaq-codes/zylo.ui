@@ -43,12 +43,11 @@ export const SearchCommand = () => {
         className="space-x-6"
         onClick={() => setOpen(true)}
       >
-        <span>Buscar...</span>
+        <span className="font-normal text-muted-foreground/80">Buscar...</span>
         <Search
-          className="-ms-1 me-3 text-muted-foreground/80"
+          className="me-3 text-muted-foreground/80"
           size={16}
           strokeWidth={2}
-          aria-hidden="true"
         />
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
