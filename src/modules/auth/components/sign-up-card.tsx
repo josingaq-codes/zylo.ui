@@ -8,7 +8,11 @@ import { toast } from "sonner";
 
 import { signUpSchema } from "@/modules/auth/auth-schema";
 
+import { authClient } from "@/lib/auth-client";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import {
   Card,
@@ -33,6 +37,25 @@ import { Logo } from "@/layouts/logo";
 import { RiGithubFill, RiGoogleFill } from "@remixicon/react";
 
 export const SignUpCard = () => {
+  const router = useRouter();
+  const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    const oneTapCall = async () => {
+      await authClient.oneTap({
+        context: "signup",
+        fetchOptions: {
+          onSuccess: () => {
+            toast.success("Cuenta creada exitosamente");
+            router.push("/browse");
+          },
+        },
+      });
+    };
+
+    oneTapCall();
+  }, [router]);
+
   const form = useForm<z.infer<typeof signUpSchema>>({
     resolver: zodResolver(signUpSchema),
     defaultValues: {
@@ -43,8 +66,31 @@ export const SignUpCard = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof signUpSchema>) => {
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof signUpSchema>) => {
+    await authClient.signUp.email(
+      {
+        name: values.fullName,
+        email: values.email,
+        password: values.password,
+      },
+      {
+        onRequest: () => {
+          setSubmitting(true);
+        },
+        onSuccess: () => {
+          toast.success("Cuenta creada exitosamente");
+          router.push("/sign-in");
+        },
+        onError: ({ error }) => {
+          if (error.code === "USER_ALREADY_EXISTS") {
+            toast.error("El correo electrónico ya se encuentra registrado");
+          }
+        },
+        onResponse: () => {
+          setSubmitting(false);
+        },
+      }
+    );
   };
 
   return (
@@ -139,7 +185,7 @@ export const SignUpCard = () => {
               )}
             />
 
-            <Button type="submit" className="w-full">
+            <Button type="submit" disabled={submitting} className="w-full">
               Crear cuenta
             </Button>
           </form>
@@ -149,12 +195,30 @@ export const SignUpCard = () => {
           <span className="text-xs text-muted-foreground">O</span>
         </div>
 
-        <Button variant="outline" onClick={() => toast.info("Próximamente")}>
+        <Button
+          variant="outline"
+          disabled={submitting}
+          onClick={async () => {
+            await authClient.signIn.social({
+              provider: "google",
+              callbackURL: "/browse",
+            });
+          }}
+        >
           <RiGoogleFill className="me-3" size={16} />
           Iniciar sesión con Google
         </Button>
 
-        <Button variant="outline" onClick={() => toast.info("Próximamente")}>
+        <Button
+          variant="outline"
+          disabled={submitting}
+          onClick={async () => {
+            await authClient.signIn.social({
+              provider: "github",
+              callbackURL: "/browse",
+            });
+          }}
+        >
           <RiGithubFill className="me-3" size={16} />
           Iniciar sesión con GitHub
         </Button>

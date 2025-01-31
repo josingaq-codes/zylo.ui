@@ -22,7 +22,9 @@ export const DesktopNav = () => {
           href="/"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname === "/" ? "text-foreground" : "text-foreground/80"
+            pathname === "/" || pathname === "/browse"
+              ? "text-foreground"
+              : "text-foreground/80"
           )}
         >
           Inicio

@@ -15,7 +15,7 @@ interface CardProps {
 }
 
 export const MediaCard = ({ className, name, backdrop, poster }: CardProps) => {
-  const NEXT_PUBLIC_TMDB_IMG_URL = process.env.NEXT_PUBLIC_TMDB_IMG_URL;
+  const NEXT_PUBLIC_TMDB_IMG_URL = process.env.NEXT_PUBLIC_TMDB_IMG_URL!;
 
   return (
     <Card

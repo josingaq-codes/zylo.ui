@@ -8,6 +8,8 @@ import { toast } from "sonner";
 
 import { signInSchema } from "@/modules/auth/auth-schema";
 
+import { authClient } from "@/lib/auth-client";
+
 import Link from "next/link";
 
 import {
@@ -32,8 +34,30 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/layouts/logo";
 
 import { RiGoogleFill, RiGithubFill } from "@remixicon/react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { LoaderCircleIcon } from "lucide-react";
 
 export const SignInCard = () => {
+  const router = useRouter();
+  const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    const oneTapCall = async () => {
+      await authClient.oneTap({
+        context: "signin",
+        fetchOptions: {
+          onSuccess: () => {
+            toast.success("Bienvenido de nuevo");
+            router.push("/browse");
+          },
+        },
+      });
+    };
+
+    oneTapCall();
+  }, [router]);
+
   const form = useForm<z.infer<typeof signInSchema>>({
     resolver: zodResolver(signInSchema),
     defaultValues: {
@@ -43,8 +67,31 @@ export const SignInCard = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof signInSchema>) => {
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof signInSchema>) => {
+    await authClient.signIn.email(
+      {
+        email: values.email,
+        password: values.password,
+        rememberMe: values.rememberMe,
+      },
+      {
+        onRequest: () => {
+          setSubmitting(true);
+        },
+        onSuccess: () => {
+          toast.success("Bienvenido de nuevo");
+          router.push("/browse");
+        },
+        onError: ({ error }) => {
+          if (error.code === "INVALID_EMAIL_OR_PASSWORD") {
+            toast.error("Correo electrónico o contraseña incorrectos");
+          }
+        },
+        onResponse: () => {
+          setSubmitting(false);
+        },
+      }
+    );
   };
 
   return (
@@ -129,7 +176,15 @@ export const SignInCard = () => {
               </Link>
             </div>
 
-            <Button type="submit" className="w-full">
+            <Button type="submit" disabled={submitting} className="w-full">
+              {submitting && (
+                <LoaderCircleIcon
+                  className="-ms-1 me-2 animate-spin"
+                  size={16}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
+              )}
               Iniciar sesión
             </Button>
           </form>
@@ -139,12 +194,30 @@ export const SignInCard = () => {
           <span className="text-xs text-muted-foreground">O</span>
         </div>
 
-        <Button variant="outline" onClick={() => toast.info("Próximamente")}>
+        <Button
+          variant="outline"
+          disabled={submitting}
+          onClick={async () => {
+            await authClient.signIn.social({
+              provider: "google",
+              callbackURL: "/browse",
+            });
+          }}
+        >
           <RiGoogleFill className="me-3" size={16} />
           Iniciar sesión con Google
         </Button>
 
-        <Button variant="outline" onClick={() => toast.info("Próximamente")}>
+        <Button
+          variant="outline"
+          disabled={submitting}
+          onClick={async () => {
+            await authClient.signIn.social({
+              provider: "github",
+              callbackURL: "/browse",
+            });
+          }}
+        >
           <RiGithubFill className="me-3" size={16} />
           Iniciar sesión con GitHub
         </Button>

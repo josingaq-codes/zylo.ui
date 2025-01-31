@@ -41,7 +41,7 @@ const list = [
 ];
 
 export const MediaCarousel = () => {
-  const NEXT_PUBLIC_TMDB_IMG_URL = process.env.NEXT_PUBLIC_TMDB_IMG_URL;
+  const NEXT_PUBLIC_TMDB_IMG_URL = process.env.NEXT_PUBLIC_TMDB_IMG_URL!;
 
   return (
     <Carousel

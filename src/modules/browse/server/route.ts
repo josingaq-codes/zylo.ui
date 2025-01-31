@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 
-const TMDB_API_URL = process.env.TMDB_API_URL;
-const TMDB_TOKEN = process.env.TMDB_TOKEN;
+const TMDB_API_URL = process.env.TMDB_API_URL!;
+const TMDB_TOKEN = process.env.TMDB_TOKEN!;
 
 const headers = {
   accept: "application/json",

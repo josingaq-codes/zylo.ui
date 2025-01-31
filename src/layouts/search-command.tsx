@@ -51,7 +51,7 @@ export const SearchCommand = () => {
           <span className="font-normal text-muted-foreground/70">Buscar</span>
         </span>
         <kbd className="-me-1 ms-12 inline-flex h-5 max-h-full items-center rounded border border-border bg-background px-1 font-[inherit] text-[0.625rem] font-medium text-muted-foreground/70">
-          ⌘K
+          ⌘ K
         </kbd>
       </button>
       <CommandDialog open={open} onOpenChange={setOpen}>
@@ -67,7 +67,7 @@ export const SearchCommand = () => {
                 aria-hidden="true"
               />
               <span>New folder</span>
-              <CommandShortcut className="justify-center">⌘N</CommandShortcut>
+              <CommandShortcut className="justify-center">⌘ N</CommandShortcut>
             </CommandItem>
             <CommandItem>
               <FileInput
@@ -77,7 +77,7 @@ export const SearchCommand = () => {
                 aria-hidden="true"
               />
               <span>Import document</span>
-              <CommandShortcut className="justify-center">⌘I</CommandShortcut>
+              <CommandShortcut className="justify-center">⌘ I</CommandShortcut>
             </CommandItem>
             <CommandItem>
               <CircleFadingPlus
@@ -87,7 +87,7 @@ export const SearchCommand = () => {
                 aria-hidden="true"
               />
               <span>Add block</span>
-              <CommandShortcut className="justify-center">⌘B</CommandShortcut>
+              <CommandShortcut className="justify-center">⌘ B</CommandShortcut>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
