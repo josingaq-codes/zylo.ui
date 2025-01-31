@@ -48,7 +48,7 @@ export const SignInCard = () => {
         context: "signin",
         fetchOptions: {
           onSuccess: () => {
-            toast.success("Bienvenido de nuevo");
+            toast.success("Bienvenido");
             router.push("/browse");
           },
         },

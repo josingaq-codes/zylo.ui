@@ -20,7 +20,7 @@ export const Header = async () => {
         <div className="flex h-14 justify-between items-center">
           <DesktopNav />
           <MobileNav />
-          <div className="flex items-center gap-0.5">
+          <div className="flex justify-between items-center gap-0.5">
             <SearchCommand />
             {session ? (
               <UserAvatar user={session.user} />

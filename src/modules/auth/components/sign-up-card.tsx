@@ -46,7 +46,7 @@ export const SignUpCard = () => {
         context: "signup",
         fetchOptions: {
           onSuccess: () => {
-            toast.success("Cuenta creada exitosamente");
+            toast.success("Bienvenido");
             router.push("/browse");
           },
         },

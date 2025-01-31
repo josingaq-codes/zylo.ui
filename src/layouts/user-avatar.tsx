@@ -28,7 +28,7 @@ export const UserAvatar = ({ user }: UserAvatarProps) => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-auto p-0 hover:bg-transparent">
-          <Avatar>
+          <Avatar className="size-8">
             <AvatarImage src={user.image ?? ""} alt={user.name} />
             <AvatarFallback>{user.name.charAt(0).toUpperCase()}</AvatarFallback>
           </Avatar>
