@@ -10,7 +10,7 @@ const headers = {
 
 export const browse = new Hono()
   .get("/trending/movies", async (c) => {
-    const url = `${TMDB_API_URL}/3/trending/movie/week?language=en-US`;
+    const url = `${TMDB_API_URL}/3/trending/movie/day?language=en-US`;
 
     const response = await fetch(url, {
       method: "GET",
@@ -24,7 +24,7 @@ export const browse = new Hono()
     return c.json({ movies });
   })
   .get("/trending/shows", async (c) => {
-    const url = `${TMDB_API_URL}/3/trending/tv/week?language=en-US`;
+    const url = `${TMDB_API_URL}/3/trending/tv/day?language=en-US`;
 
     const response = await fetch(url, {
       method: "GET",
