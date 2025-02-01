@@ -76,7 +76,7 @@ export const UserAvatar = ({ user }: UserAvatarProps) => {
             await authClient.signOut({
               fetchOptions: {
                 onSuccess: () => {
-                  router.push("/auth/sign-in");
+                  router.push("/");
                 },
               },
             });
