@@ -61,9 +61,9 @@ export const MobileNav = () => {
               Inicio
             </Link>
             <Link
-              href="/movies"
+              href="/browse/movies"
               onClick={() => {
-                router.push("/movies");
+                router.push("/browse/movies");
                 onOpenChange(false);
               }}
               className="text-base"
@@ -71,9 +71,9 @@ export const MobileNav = () => {
               Películas
             </Link>
             <Link
-              href="/shows"
+              href="/browse/shows"
               onClick={() => {
-                router.push("/shows");
+                router.push("/browse/shows");
                 onOpenChange(false);
               }}
               className="text-base"
@@ -81,9 +81,9 @@ export const MobileNav = () => {
               Series
             </Link>
             <Link
-              href="/live"
+              href="/browse/live"
               onClick={() => {
-                router.push("/live");
+                router.push("/browse/live");
                 onOpenChange(false);
               }}
               className="text-base"

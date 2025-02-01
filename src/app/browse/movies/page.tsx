@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { Movies } from "@/modules/browse/pages/movies";
 
 export const metadata: Metadata = {
-  title: "Películas",
+  title: "Página de Películas",
 };
 
 export default function MoviesPage() {

@@ -28,10 +28,10 @@ export const DesktopNav = () => {
           Inicio
         </Link>
         <Link
-          href="/movies"
+          href="/browse/movies"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/movies")
+            pathname?.startsWith("/browse/movies")
               ? "text-foreground"
               : "text-foreground/80"
           )}
@@ -39,10 +39,10 @@ export const DesktopNav = () => {
           Películas
         </Link>
         <Link
-          href="/shows"
+          href="/browse/shows"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/shows")
+            pathname?.startsWith("/browse/shows")
               ? "text-foreground"
               : "text-foreground/80"
           )}
@@ -50,10 +50,10 @@ export const DesktopNav = () => {
           Series
         </Link>
         <Link
-          href="/live"
+          href="/browse/live"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/live")
+            pathname?.startsWith("/browse/live")
               ? "text-foreground"
               : "text-foreground/80"
           )}
