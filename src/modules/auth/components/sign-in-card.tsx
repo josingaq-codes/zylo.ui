@@ -224,7 +224,7 @@ export const SignInCard = () => {
 
         <p className="text-center text-xs text-muted-foreground">
           No tienes una cuenta?{" "}
-          <Link className="underline hover:no-underline" href="/sign-up">
+          <Link className="underline hover:no-underline" href="/auth/sign-up">
             Regístrate aquí
           </Link>
         </p>

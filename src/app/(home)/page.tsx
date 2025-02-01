@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { Home } from "@/modules/browse/components/pages/home";
+import { Home } from "@/modules/home/pages/home";
 
 export const metadata: Metadata = {
   title: "Inicio",

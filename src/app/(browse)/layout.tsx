@@ -1,4 +1,4 @@
-import { Header } from "@/layouts/header";
+import { HeaderBrowse } from "@/layouts/browse/header-browse";
 
 interface BrowseLayoutProps {
   children: React.ReactNode;
@@ -7,7 +7,7 @@ interface BrowseLayoutProps {
 export default function BrowseLayout({ children }: BrowseLayoutProps) {
   return (
     <main>
-      <Header />
+      <HeaderBrowse />
       {children}
     </main>
   );

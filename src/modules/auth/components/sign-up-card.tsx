@@ -79,7 +79,7 @@ export const SignUpCard = () => {
         },
         onSuccess: () => {
           toast.success("Cuenta creada exitosamente");
-          router.push("/sign-in");
+          router.push("/auth/sign-in");
         },
         onError: ({ error }) => {
           if (error.code === "USER_ALREADY_EXISTS") {
@@ -225,7 +225,7 @@ export const SignUpCard = () => {
 
         <p className="text-center text-xs text-muted-foreground">
           Ya tienes una cuenta?{" "}
-          <Link className="underline hover:no-underline" href="/sign-in">
+          <Link className="underline hover:no-underline" href="/auth/sign-in">
             Inicia sesión
           </Link>
         </p>

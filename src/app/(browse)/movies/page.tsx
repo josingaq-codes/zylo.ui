@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { Movies } from "@/modules/browse/components/pages/movies";
+import { Movies } from "@/modules/browse/pages/movies";
 
 export const metadata: Metadata = {
   title: "Películas",

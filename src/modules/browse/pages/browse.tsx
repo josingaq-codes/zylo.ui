@@ -7,12 +7,12 @@ import { MediaCarousel } from "@/modules/browse/components/media-carousel";
 import { MediaCard } from "@/modules/browse/components/media-card";
 import { ListSkeletonCard } from "@/modules/browse/components/list-skeleton-card";
 
-export const Home = () => {
+export const Browse = () => {
   const { data: movies, isLoading: loadingMovies } = useTrendingMovies();
   const { data: shows, isLoading: loadingShows } = useTrendingShows();
 
   return (
-    <section className="max-w-screen-xl mx-auto px-4 sm:px-6 py-4 space-y-4">
+    <section className="max-w-screen-xl mx-auto px-2 sm:px-0 py-4 space-y-4">
       <div className="flex justify-center">
         <MediaCarousel />
       </div>

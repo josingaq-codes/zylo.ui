@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
-import { Home } from "@/modules/browse/components/pages/home";
+import { Browse } from "@/modules/browse/pages/browse";
 
 export const metadata: Metadata = {
-  title: "Inicio",
+  title: "Página de Inicio",
 };
 
 export default function BrowsePage() {
-  return <Home />;
+  return <Browse />;
 }

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 import { MoonIcon, SunIcon } from "lucide-react";
 
-export function ModeSwitcher() {
+export function ModeSwitcherHome() {
   const { setTheme, resolvedTheme } = useTheme();
 
   const toggleTheme = useCallback(() => {
@@ -16,9 +16,14 @@ export function ModeSwitcher() {
   }, [resolvedTheme, setTheme]);
 
   return (
-    <Button variant="outline" size="icon" onClick={toggleTheme}>
-      <SunIcon className="hidden [html.dark_&]:block size-5 text-muted-foreground/80" />
-      <MoonIcon className="hidden [html.light_&]:block size-5 text-muted-foreground/80" />
+    <Button
+      variant="outline"
+      size="icon"
+      className="rounded-xl"
+      onClick={toggleTheme}
+    >
+      <SunIcon className="hidden [html.dark_&]:block size-5" />
+      <MoonIcon className="hidden [html.light_&]:block size-5" />
       <span className="sr-only">Toggle theme</span>
     </Button>
   );

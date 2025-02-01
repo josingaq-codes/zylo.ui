@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { Shows } from "@/modules/browse/components/pages/shows";
+import { Shows } from "@/modules/browse/pages/shows";
 
 export const metadata: Metadata = {
   title: "Series",

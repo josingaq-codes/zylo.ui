@@ -33,7 +33,7 @@ export const SearchCommand = () => {
     <>
       <Button
         variant="outline"
-        className="space-x-6"
+        className="space-x-6 rounded-xl"
         onClick={() => setOpen(true)}
       >
         <span className="font-normal text-muted-foreground/80">Buscar...</span>

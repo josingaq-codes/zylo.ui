@@ -51,9 +51,9 @@ export const MobileNav = () => {
         <div className="overflow-auto p-6">
           <div className="flex flex-col space-y-3">
             <Link
-              href="/"
+              href="/browse"
               onClick={() => {
-                router.push("/");
+                router.push("/browse");
                 onOpenChange(false);
               }}
               className="text-base"
