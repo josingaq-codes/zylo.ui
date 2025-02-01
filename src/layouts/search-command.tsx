@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  ArrowUpRight,
-  CircleFadingPlus,
-  FileInput,
-  FolderPlus,
-  Search,
-} from "lucide-react";
+import { ClapperboardIcon, FilmIcon, SearchIcon } from "lucide-react";
 import * as React from "react";
 
 import {
@@ -17,7 +11,6 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-  CommandShortcut,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 
@@ -44,7 +37,7 @@ export const SearchCommand = () => {
         onClick={() => setOpen(true)}
       >
         <span className="font-normal text-muted-foreground/80">Buscar...</span>
-        <Search
+        <SearchIcon
           className="me-3 text-muted-foreground/80"
           size={16}
           strokeWidth={2}
@@ -53,67 +46,46 @@ export const SearchCommand = () => {
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Busca una película o serie..." />
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
+          <CommandEmpty>No se han encontrado resultados.</CommandEmpty>
           <CommandGroup heading="Películas">
             <CommandItem>
-              <FolderPlus
-                size={16}
-                strokeWidth={2}
-                className="opacity-60"
-                aria-hidden="true"
-              />
-              <span>New folder</span>
-              <CommandShortcut className="justify-center">⌘ N</CommandShortcut>
+              <FilmIcon size={16} strokeWidth={2} className="opacity-60" />
+              <span>Moana 2</span>
             </CommandItem>
             <CommandItem>
-              <FileInput
-                size={16}
-                strokeWidth={2}
-                className="opacity-60"
-                aria-hidden="true"
-              />
-              <span>Import document</span>
-              <CommandShortcut className="justify-center">⌘ I</CommandShortcut>
+              <FilmIcon size={16} strokeWidth={2} className="opacity-60" />
+              <span>La sustancia</span>
             </CommandItem>
             <CommandItem>
-              <CircleFadingPlus
-                size={16}
-                strokeWidth={2}
-                className="opacity-60"
-                aria-hidden="true"
-              />
-              <span>Add block</span>
-              <CommandShortcut className="justify-center">⌘ B</CommandShortcut>
+              <FilmIcon size={16} strokeWidth={2} className="opacity-60" />
+              <span>Sonic 3: La Película</span>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Series">
             <CommandItem>
-              <ArrowUpRight
+              <ClapperboardIcon
                 size={16}
                 strokeWidth={2}
                 className="opacity-60"
-                aria-hidden="true"
               />
-              <span>Go to dashboard</span>
+              <span>El juego del calamar</span>
             </CommandItem>
             <CommandItem>
-              <ArrowUpRight
+              <ClapperboardIcon
                 size={16}
                 strokeWidth={2}
                 className="opacity-60"
-                aria-hidden="true"
               />
-              <span>Go to apps</span>
+              <span>Juego de Tronos</span>
             </CommandItem>
             <CommandItem>
-              <ArrowUpRight
+              <ClapperboardIcon
                 size={16}
                 strokeWidth={2}
                 className="opacity-60"
-                aria-hidden="true"
               />
-              <span>Go to connections</span>
+              <span>From</span>
             </CommandItem>
           </CommandGroup>
         </CommandList>
