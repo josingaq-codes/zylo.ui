@@ -22,10 +22,6 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <meta
-        http-equiv="Content-Security-Policy"
-        content="upgrade-insecure-requests"
-      />
       <head>
         <link rel="icon" href="/icon.svg" />
       </head>
