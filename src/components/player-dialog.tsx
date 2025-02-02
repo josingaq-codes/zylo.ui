@@ -18,8 +18,10 @@ import "@vidstack/react/player/styles/plyr/theme.css";
 
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
@@ -32,6 +34,8 @@ import {
   VimeoSrc,
   YouTubeSrc,
 } from "@vidstack/react";
+import { Button } from "@/components/ui/button";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 interface PlayerDialogProps {
   isOpen: boolean;
@@ -55,13 +59,12 @@ export const PlayerDialog = ({
           <DialogTitle className="border-b border-border px-6 py-4 text-base">
             {name}
           </DialogTitle>
-          <DialogDescription asChild>
+          <DialogDescription asChild className="px-2 py-2">
             <MediaPlayer
               title={name}
               src={src}
               playsInline={true}
               autoPlay={true}
-              crossOrigin=""
             >
               <MediaProvider />
               <PlyrLayout thumbnails={thumbnail} icons={plyrLayoutIcons} />
@@ -81,6 +84,20 @@ export const PlayerDialog = ({
             </MediaPlayer> */}
           </DialogDescription>
         </DialogHeader>
+        <DialogFooter className="flex flex-row justify-between sm:justify-between border-t border-border px-6 py-4">
+          <DialogClose asChild>
+            <Button type="button" className="flex items-center gap-2">
+              <ChevronLeftIcon />
+              <span>Anterior</span>
+            </Button>
+          </DialogClose>
+          <DialogClose asChild>
+            <Button type="button" className="flex items-center gap-2">
+              <span>Siguiente</span>
+              <ChevronRightIcon />
+            </Button>
+          </DialogClose>
+        </DialogFooter>
       </DialogContent>
     </Dialog>
   );
