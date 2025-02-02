@@ -132,4 +132,11 @@ export const lives = [
     src: "https://live-evg25.tv360.bitel.com.pe/bitel/toplatino/playlist.m3u8",
     type: "application/x-mpegurl",
   },
+  {
+    id: 20,
+    title: "Willax IPTV",
+    img: "https://img-evg3.tv360.bitel.com.pe/peru-image/2025/01/02/23/173583580272/995ec5483ca5_640_360.png",
+    src: "http://digital.webhop.net:80/play/negeNieHYlV7DQit8X_CUM3HGkGgRw42AVXHDLXXjI8/m3u8",
+    type: "application/x-mpegurl",
+  },
 ];
