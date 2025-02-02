@@ -23,6 +23,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
+        <meta name="referrer" content="no-referrer" />
         <link rel="icon" href="/icon.svg" />
       </head>
       <body className="antialiased">
