@@ -162,9 +162,30 @@ export const lives = [
   },
   {
     id: 24,
-    title: "Cine Canal",
+    title: "CineCanal",
     img: "https://streamplayweb.com/wp-content/uploads/2024/02/jac-63.png",
     src: "https://jactvpro.xyz/live/Upb93ECM5B/RRzkDRt6w8/10274.m3u8",
+    type: "application/x-mpegurl",
+  },
+  {
+    id: 25,
+    title: "CineMax",
+    img: "https://streamplayweb.com/wp-content/uploads/2024/02/jac-64.png",
+    src: "https://jactvpro.xyz/live/Upb93ECM5B/RRzkDRt6w8/10275.m3u8",
+    type: "application/x-mpegurl",
+  },
+  {
+    id: 26,
+    title: "Paramount",
+    img: "https://streamplayweb.com/wp-content/uploads/2024/02/jac-66.png",
+    src: "https://jactvpro.xyz/live/Upb93ECM5B/RRzkDRt6w8/10276.m3u8",
+    type: "application/x-mpegurl",
+  },
+  {
+    id: 27,
+    title: "Golden",
+    img: "https://streamplayweb.com/wp-content/uploads/2024/02/jac-69.png",
+    src: "https://jactvpro.xyz/live/Upb93ECM5B/RRzkDRt6w8/10277.m3u8",
     type: "application/x-mpegurl",
   },
 ];

@@ -1,20 +1,20 @@
 "use client";
 
-import { MediaPlayer, MediaProvider } from "@vidstack/react";
-import {
-  PlyrLayout,
-  plyrLayoutIcons,
-} from "@vidstack/react/player/layouts/plyr";
-import "@vidstack/react/player/styles/base.css";
-import "@vidstack/react/player/styles/plyr/theme.css";
-
 // import { MediaPlayer, MediaProvider } from "@vidstack/react";
 // import {
-//   defaultLayoutIcons,
-//   DefaultVideoLayout,
-// } from "@vidstack/react/player/layouts/default";
-// import "@vidstack/react/player/styles/default/theme.css";
-// import "@vidstack/react/player/styles/default/layouts/video.css";
+//   PlyrLayout,
+//   plyrLayoutIcons,
+// } from "@vidstack/react/player/layouts/plyr";
+// import "@vidstack/react/player/styles/base.css";
+// import "@vidstack/react/player/styles/plyr/theme.css";
+
+import { MediaPlayer, MediaProvider } from "@vidstack/react";
+import {
+  defaultLayoutIcons,
+  DefaultVideoLayout,
+} from "@vidstack/react/player/layouts/default";
+import "@vidstack/react/player/styles/default/theme.css";
+import "@vidstack/react/player/styles/default/layouts/video.css";
 
 import {
   Dialog,
@@ -60,7 +60,7 @@ export const PlayerDialog = ({
             {name}
           </DialogTitle>
           <DialogDescription asChild className="px-2 py-2">
-            <MediaPlayer
+            {/* <MediaPlayer
               title={name}
               src={src}
               playsInline={true}
@@ -68,9 +68,9 @@ export const PlayerDialog = ({
             >
               <MediaProvider />
               <PlyrLayout thumbnails={thumbnail} icons={plyrLayoutIcons} />
-            </MediaPlayer>
+            </MediaPlayer> */}
 
-            {/* <MediaPlayer
+            <MediaPlayer
               title={name}
               src={src}
               playsInline={true}
@@ -81,7 +81,7 @@ export const PlayerDialog = ({
                 thumbnails={thumbnail}
                 icons={defaultLayoutIcons}
               />
-            </MediaPlayer> */}
+            </MediaPlayer>
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="flex flex-row justify-between sm:justify-between border-t border-border px-6 py-4">
