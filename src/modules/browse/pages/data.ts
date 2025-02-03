@@ -188,4 +188,32 @@ export const lives = [
     src: "https://jactvpro.xyz/live/Upb93ECM5B/RRzkDRt6w8/10277.m3u8",
     type: "application/x-mpegurl",
   },
+  {
+    id: 28,
+    title: "Golden Edge",
+    img: "https://streamplayweb.com/wp-content/uploads/2024/02/jac-70.png",
+    src: "https://jactvpro.xyz/live/Upb93ECM5B/RRzkDRt6w8/10278.m3u8",
+    type: "application/x-mpegurl",
+  },
+  {
+    id: 29,
+    title: "HBO",
+    img: "https://streamplayweb.com/wp-content/uploads/2024/02/jac-71.png",
+    src: "https://jactvpro.xyz:443/live/Upb93ECM5B/RRzkDRt6w8/10279.m3u8",
+    type: "application/x-mpegurl",
+  },
+  {
+    id: 30,
+    title: "HBO 2",
+    img: "https://streamplayweb.com/wp-content/uploads/2024/02/jac-72.png",
+    src: "https://jactvpro.xyz:443/live/Upb93ECM5B/RRzkDRt6w8/10280.m3u8",
+    type: "application/x-mpegurl",
+  },
+  {
+    id: 31,
+    title: "HBO Plus",
+    img: "https://streamplayweb.com/wp-content/uploads/2024/02/jac-73.png",
+    src: "https://jactvpro.xyz:443/live/Upb93ECM5B/RRzkDRt6w8/10281.m3u8",
+    type: "application/x-mpegurl",
+  },
 ];
