@@ -12,7 +12,7 @@ export const Browse = () => {
   const { data: shows, isLoading: loadingShows } = useTrendingShows();
 
   return (
-    <section className="max-w-screen-xl mx-auto px-2 sm:px-0 py-4 space-y-4">
+    <section className="max-w-screen-xl mx-auto px-2 sm:px-0 py-2 space-y-4">
       <div className="flex justify-center">
         <MediaCarousel />
       </div>

@@ -14,8 +14,8 @@ export const HeaderBrowse = async () => {
 
   return (
     <>
-      <div className="w-full h-4"></div>
-      <header className="w-full sticky top-4 z-10 px-2">
+      <div className="w-full h-2"></div>
+      <header className="w-full sticky top-2 z-10 px-2">
         <div className="max-w-screen-xl mx-auto px-4 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-xl">
           <div className="flex h-16 justify-between items-center">
             <DesktopNav />
