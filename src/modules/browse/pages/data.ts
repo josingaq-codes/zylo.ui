@@ -216,4 +216,25 @@ export const lives = [
     src: "https://jactvpro.xyz:443/live/Upb93ECM5B/RRzkDRt6w8/10281.m3u8",
     type: "application/x-mpegurl",
   },
+  {
+    id: 32,
+    title: "HBO Family",
+    img: "https://streamplayweb.com/wp-content/uploads/2024/02/jac-74.png",
+    src: "https://jactvpro.xyz:443/live/Upb93ECM5B/RRzkDRt6w8/10282.m3u8",
+    type: "application/x-mpegurl",
+  },
+  {
+    id: 33,
+    title: "Sony Channel",
+    img: "https://streamplayweb.com/wp-content/uploads/2024/02/jac-75.png",
+    src: "https://jactvpro.xyz:443/live/Upb93ECM5B/RRzkDRt6w8/10283.m3u8",
+    type: "application/x-mpegurl",
+  },
+  {
+    id: 34,
+    title: "Warner Channel",
+    img: "https://streamplayweb.com/wp-content/uploads/2024/02/jac-76.png",
+    src: "https://jactvpro.xyz:443/live/Upb93ECM5B/RRzkDRt6w8/10284.m3u8",
+    type: "application/x-mpegurl",
+  },
 ];
