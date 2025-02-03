@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import { MediaPlayer, MediaProvider } from "@vidstack/react";
 import {
   PlyrLayout,
@@ -51,6 +53,14 @@ export const PlayerDialog = ({
   src,
   thumbnail,
 }: PlayerDialogProps) => {
+  const [copySrc, setCopySrc] = useState<
+    AudioSrc | VideoSrc | HLSSrc | DASHSrc | YouTubeSrc | VimeoSrc
+  >();
+
+  useEffect(() => {
+    setCopySrc(src);
+  }, [src]);
+
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="flex flex-col gap-0 p-0 sm:max-w-4xl overflow-hidden">
@@ -61,7 +71,7 @@ export const PlayerDialog = ({
           <DialogDescription asChild className="px-2 py-2">
             <MediaPlayer
               title={name}
-              src={src}
+              src={copySrc}
               playsInline={true}
               autoPlay={true}
               aspectRatio="16/9"
@@ -73,7 +83,7 @@ export const PlayerDialog = ({
 
             {/* <MediaPlayer
               title={name}
-              src={src}
+              src={copySrc}
               playsInline={true}
               autoPlay={true}
               aspectRatio="16/9"
@@ -88,7 +98,17 @@ export const PlayerDialog = ({
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="flex flex-col sm:flex-row justify-between sm:justify-between border-t border-border px-6 py-4">
-          <Button type="button" className="flex items-center gap-2">
+          <Button
+            type="button"
+            className="flex items-center gap-2"
+            onClick={() => {
+              setCopySrc({ src: "", type: "application/x-mpegurl" });
+
+              setTimeout(() => {
+                setCopySrc(src);
+              }, 100);
+            }}
+          >
             <RotateCwIcon />
             <span>Recargar</span>
           </Button>
