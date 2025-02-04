@@ -17,7 +17,7 @@ export const lives = [
     id: 3,
     title: "America",
     img: "https://img-evg3.tv360.bitel.com.pe/peru-image/2025/01/02/23/1735835681860/c6e8bd31225d_640_360.png",
-    src: "https://live-evg4.tv360.bitel.com.pe/Xa1bmtiCjQXiTcvFF5bgPA/1738608429/bitel/americatv/playlist.m3u8?uid=4727728",
+    src: "https://live-evg4.tv360.bitel.com.pe/cYTAUkFJHzkDaJcFfu1-gA/1738713090/bitel/americatv/playlist.m3u8?uid=4727728",
     type: "application/x-mpegurl",
   },
   {
