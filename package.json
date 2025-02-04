@@ -15,6 +15,7 @@
   "dependencies": {
     "@better-fetch/fetch": "1.1.12",
     "@fontsource-variable/onest": "5.1.1",
+    "@fontsource-variable/outfit": "^5.1.1",
     "@hono/zod-validator": "0.4.2",
     "@hookform/resolvers": "3.10.0",
     "@radix-ui/react-aspect-ratio": "1.1.1",

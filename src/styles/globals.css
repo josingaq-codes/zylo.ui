@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  font-family: "Onest Variable", sans-serif;
+  /* font-family: "Onest Variable", sans-serif; */
+  font-family: "Outfit Variable", sans-serif;
 }
 
 @layer base {

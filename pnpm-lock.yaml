@@ -14,6 +14,9 @@ importers:
       '@fontsource-variable/onest':
         specifier: 5.1.1
         version: 5.1.1
+      '@fontsource-variable/outfit':
+        specifier: ^5.1.1
+        version: 5.1.1
       '@hono/zod-validator':
         specifier: 0.4.2
         version: 0.4.2(hono@4.6.20)(zod@3.24.1)
@@ -683,6 +686,9 @@ packages:
 
   '@fontsource-variable/onest@5.1.1':
     resolution: {integrity: sha512-Lb1hWJL7z7VZ9oDiHp5/O4tq/tzSQ0md1Luv+RPRnw3WalFoRBdjE9Xw9ibgteEeVlv8fYQ3UTR6ALDwdWxgzQ==}
+
+  '@fontsource-variable/outfit@5.1.1':
+    resolution: {integrity: sha512-XuzmITw6zWt3nUINJVAk99f0TgXJ9ZCt3qERAr0t89Em6RbqQ4x6skmxsIgjzkLHVzmoqf3AzCbxvpk/kNnu5A==}
 
   '@hexagon/base64@1.1.28':
     resolution: {integrity: sha512-lhqDEAvWixy3bZ+UOYbPwUbBkwBq5C1LAJ/xPC8Oi+lL54oyakv/npbA0aU2hgCsx/1NUd4IBvV03+aUBWxerw==}
@@ -4144,6 +4150,8 @@ snapshots:
   '@floating-ui/utils@0.2.9': {}
 
   '@fontsource-variable/onest@5.1.1': {}
+
+  '@fontsource-variable/outfit@5.1.1': {}
 
   '@hexagon/base64@1.1.28': {}
 

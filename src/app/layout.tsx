@@ -6,7 +6,8 @@ import { Toaster } from "@/components/ui/sonner";
 
 import "@/styles/globals.css";
 
-import "@fontsource-variable/onest";
+// import "@fontsource-variable/onest";
+import "@fontsource-variable/outfit";
 
 export const metadata: Metadata = {
   title: {
