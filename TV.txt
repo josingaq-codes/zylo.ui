@@ -1,0 +1,159 @@
+### PERÚ ###
+
+LATINA (OK)
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/latina/playlist.m3u8
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an31/playlist.m3u8
+- REDIRECTOR:
+  - https://redirector.dps.live/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latina/latina.smil/playlist.m3u8
+- JIREH 1 AR:
+  - https://jireh-1-hls-video-ar-isp.dps.live/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latina/latina.smil/playlist.m3u8
+- JIREH 3 US:
+  - https://jireh-3-hls-video-us-isp.dps.live/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latina/latina.smil/playlist.m3u8
+- JIREH 4 US:
+  - https://jireh-4-hls-video-us-isp.dps.live/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latina/latina.smil/playlist.m3u8
+- JIREH 5 US:
+  - https://jireh-5-hls-video-us-isp.dps.live/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latina/latina.smil/playlist.m3u8
+- JIREH 6 US:
+  - https://jireh-6-hls-video-us-isp.dps.live/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latina/latina.smil/playlist.m3u8
+
+AMERICA (OK)
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an29/playlist.m3u8
+
+PANAMERICANA (OK)
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/panamericana/playlist.m3u8
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an33/playlist.m3u8
+
+TV PERÚ (OK)
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/tvperu/playlist.m3u8
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an36/playlist.m3u8
+- IBLUPS:
+  - https://cdnhd.iblups.com/hls/902c1a0395264f269f1160efa00660e4.m3u8
+
+ATV (OK)
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/atv/playlist.m3u8
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an30/playlist.m3u8
+
+ATV + (OK)
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/atvmas/playlist.m3u8
+
+ATV SUR (OK)
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/atvsur/playlist.m3u8
+
+WILLAX
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/willax/playlist.m3u8
+
+PBO
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/pbo/playlist.m3u8
+
+LA TELE
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/latele/playlist.m3u8
+
+GLOBAL
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/global/playlist.m3u8
+
+CANAL N
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an38/playlist.m3u8
+
+RPP
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an08/playlist.m3u8
+
+EXITOSA
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/exitosa/playlist.m3u8
+
+KARIBEÑA TV
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/karibeñatv/playlist.m3u8
+- EGOSTREAMING:
+  - https://live-player.egostreaming.pe/karibenatv_685a-pe-a5676-584412/index.fmp4.m3u8
+
+NATIVA
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/nativa/playlist.m3u8
+- ONEPLAY:
+  - https://oneplay.iptvperu.tv:1936/static/nativa1.stream/playlist.m3u8
+
+ANIME ONEGAI
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/animeOnegai/playlist.m3u8
+
+FMH MOVIES
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/fmhmovies/playlist.m3u8
+
+FMH KIDS
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/fmhkids/playlist.m3u8
+
+CANAL IPE
+- IBLUPS:
+  - https://cdnhd.iblups.com/hls/3f2cb1658d114f2693eff18d83199e67.m3u8
+
+TOP LATINO
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/toplatino/playlist.m3u8
+
+GOL PERÚ
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an35/playlist.m3u8
+
+PERÚ MÁGICO
+- DS:
+  - https://dsr.ride.com.ar/tvmia/an34/playlist.m3u8
+
+BHTV
+- BITEL:
+  - https://live-evg25.tv360.bitel.com.pe/bitel/bhtv/playlist.m3u8
+
+### ARGENTINA ###
+
+A24
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an37/playlist.m3u8
+
+CANAL DE LA CIUDAD
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an41/playlist.m3u8
+
+BRAVO TV
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an42/playlist.m3u8
+
+METRO
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an43/playlist.m3u8
+
+SOMOS NOTICIA
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an44/playlist.m3u8
+
+### INTERNACIONALES ###
+
+TNT SPORTS PREMIUM
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an32/playlist.m3u8
+
+WOBI TV
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an40/playlist.m3u8
+
+GOLF
+- DSR:
+  - https://dsr.ride.com.ar/tvmia/an45/playlist.m3u8

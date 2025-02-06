@@ -8,8 +8,8 @@ import { MediaCard } from "@/modules/browse/components/media-card";
 import { ListSkeletonCard } from "@/modules/browse/components/list-skeleton-card";
 
 export const Browse = () => {
-  const { data: movies, isLoading: loadingMovies } = useTrendingMovies();
-  const { data: shows, isLoading: loadingShows } = useTrendingShows();
+  const { data: moviesData, isLoading: loadingMovies } = useTrendingMovies();
+  const { data: showsData, isLoading: loadingShows } = useTrendingShows();
 
   return (
     <section className="max-w-screen-xl mx-auto px-2 sm:px-0 py-2 space-y-4">
@@ -19,7 +19,7 @@ export const Browse = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {loadingMovies && <ListSkeletonCard quantity={20} />}
 
-        {movies?.map((movie) => (
+        {moviesData?.movies.map((movie) => (
           <MediaCard
             key={movie.id}
             name={movie.title}
@@ -32,7 +32,7 @@ export const Browse = () => {
 
         {loadingShows && <ListSkeletonCard quantity={20} />}
 
-        {shows?.map((show) => (
+        {showsData?.shows.map((show) => (
           <MediaCard
             key={show.id}
             name={show.name}

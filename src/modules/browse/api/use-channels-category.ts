@@ -2,11 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 
 import { client } from "@/lib/rpc";
 
-export const useNowShows = () => {
+export const useChannelsCategory = () => {
   const query = useQuery({
-    queryKey: ["now-shows"],
+    queryKey: ["now-movies"],
     queryFn: async () => {
-      const response = await client.api.browse.now.shows.$get();
+      const response = await client.api.browse.channels.category.$get();
 
       return await response.json();
     },

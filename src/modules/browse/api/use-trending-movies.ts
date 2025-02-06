@@ -8,9 +8,7 @@ export const useTrendingMovies = () => {
     queryFn: async () => {
       const response = await client.api.browse.trending.movies.$get();
 
-      const { movies } = await response.json();
-
-      return movies;
+      return await response.json();
     },
   });
 

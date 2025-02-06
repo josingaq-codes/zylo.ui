@@ -8,9 +8,7 @@ export const useTrendingShows = () => {
     queryFn: async () => {
       const response = await client.api.browse.trending.shows.$get();
 
-      const { shows } = await response.json();
-
-      return shows;
+      return await response.json();
     },
   });
 

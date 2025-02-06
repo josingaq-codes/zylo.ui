@@ -8,9 +8,7 @@ export const useNowMovies = () => {
     queryFn: async () => {
       const response = await client.api.browse.now.movies.$get();
 
-      const { movies } = await response.json();
-
-      return movies;
+      return await response.json();
     },
   });
 
